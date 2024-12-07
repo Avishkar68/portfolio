@@ -1,0 +1,32 @@
+.text-container {
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    height: 1em; /* Ensures only one line of text is visible */
+    position: relative;
+  }
+  
+  .sliding-text {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .text {
+    position: absolute;
+    width: 100%;
+    opacity: 0;
+    transform: translateY(100%); /* Start from below */
+    transition: transform 0.5s ease, opacity 0.5s ease;
+  }
+  
+  .text.active {
+    opacity: 1;
+    transform: translateY(0); /* Move into position */
+  }
+  
+  .text:not(.active) {
+    opacity: 0;
+    transform: translateY(-100%); /* Slide out upwards */
+  }
+  
