@@ -1,3 +1,5 @@
+
+
 .text-container {
     display: flex;
     flex-direction: column;
@@ -30,3 +32,23 @@
     transform: translateY(-100%); /* Slide out upwards */
   }
   
+.navfont{
+    font-family: "Playfair Display";
+}
+.link1{
+    position: relative;
+}
+.link1::before{
+    content: "";
+    height: 2px;
+    width: 0%;
+    position: absolute;
+    background-color: white;
+    left: 0;
+    bottom: 0;
+    transition: 0.4s ease;
+   
+}
+.link1:hover::before{
+    width: 100%;
+}
