@@ -5,7 +5,8 @@ import { TiThMenu } from "react-icons/ti";
 import { IoMdClose } from "react-icons/io";
 import { AnimatePresence, motion } from "framer-motion";
 import "./Hero.css";
-
+import logo from "../../assets/logoak.png";
+import logodark from "../../assets/logodark.png";
 const Hero = () => {
   const [isNav, setIsNav] = useState(false);
   const [showAnimations, setShowAnimations] = useState(true); // Track if animations should show
@@ -50,7 +51,6 @@ const Hero = () => {
     },
   };
 
-
   const containerVars = {
     initial: {
       transition: {
@@ -79,8 +79,8 @@ const Hero = () => {
             exit="exit"
           >
             <div className="h-[80px] flex items-center justify-between px-4">
-              <div className="text-2xl font-bold bg-white text-black rounded-[50%] p-2">
-                AK
+              <div className="m-2 w-[40px]">
+                <img src={logodark} />
               </div>
               <IoMdClose
                 className="text-4xl font-bold cursor-pointer"
@@ -119,8 +119,8 @@ const Hero = () => {
       {!isNav && (
         <div className="h-[100vh] w-[100vw] bg-black text-white px-2">
           <div className="h-[80px] flex items-center justify-between">
-            <div className="text-2xl font-bold bg-white text-black rounded-[50%] p-2">
-              AK
+            <div className="m-2 w-[40px]">
+              <img src={logo} />
             </div>
             <div className="flex gap-16 items-center">
               <a href="https://github.com/Avishkar68" className="link1">

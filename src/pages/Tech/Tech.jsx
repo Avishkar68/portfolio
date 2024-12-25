@@ -40,7 +40,6 @@ const Tech = () => {
       <LanguagesModel iconSlugs={slugs} />
       </div>
 
-
       <div className='w-[40vw] text-4xl font-semibold'>
         <div className='p-6 border border-white rounded-md m-10 text-white flex items-center justify-center'>FRONTEND</div>
         <div className='p-6 border border-white rounded-md m-10 text-white flex items-center justify-center'>BACKEND</div>
