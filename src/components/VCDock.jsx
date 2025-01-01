@@ -1,16 +1,9 @@
 "use client";
 
 import * as Tooltip from "@radix-ui/react-tooltip";
-import {
-  animate,
-  motion,
-  useMotionValue,
-  useSpring,
-  useTransform,
-} from "framer-motion";
+import { motion, useMotionValue, useSpring, useTransform } from "framer-motion";
 import { useRef } from "react";
-import { FaReact } from "react-icons/fa";
-import { SiHtml5, SiCss3, SiJavascript, SiTailwindcss, SiNextdotjs } from "react-icons/si"; // Import other icons
+import { SiGit, SiGithub, SiGitlab, SiBitbucket } from "react-icons/si"; // Import relevant icons
 
 const SCALE = 2.25; // max scale factor of an icon
 const DISTANCE = 110; // pixels before mouse affects an icon
@@ -22,15 +15,13 @@ const SPRING = {
 };
 
 const APPS = [
-  { name: "HTML", icon: <SiHtml5 className="text-orange-500" /> },
-  { name: "CSS", icon: <SiCss3 className="text-blue-500" /> },
-  { name: "JavaScript", icon: <SiJavascript className="text-yellow-500" /> },
-  { name: "React", icon: <FaReact className="text-blue-500" /> },
-  { name: "Tailwind CSS", icon: <SiTailwindcss className="text-cyan-500" /> },
-  { name: "Next.js", icon: <SiNextdotjs className="text-black" /> },
+  { name: "Git", icon: <SiGit className="text-orange-500" /> },
+  { name: "GitHub", icon: <SiGithub className="text-black" /> },
+  { name: "GitLab", icon: <SiGitlab className="text-orange-600" /> },
+  { name: "Bitbucket", icon: <SiBitbucket className="text-blue-500" /> },
 ];
 
-export default function Dock() {
+export default function VersionControlDock() {
   const mouseLeft = useMotionValue(-Infinity);
   const mouseRight = useMotionValue(-Infinity);
   const left = useTransform(mouseLeft, [0, 40], [0, -40]);
@@ -58,7 +49,6 @@ export default function Dock() {
           className="absolute rounded-2xl inset-y-0  -z-10"
           style={{ left: leftSpring, right: rightSpring }}
         />
-
         {APPS.map((app, i) => (
           <AppIcon key={i} mouseLeft={mouseLeft} label={app.name} icon={app.icon} />
         ))}
