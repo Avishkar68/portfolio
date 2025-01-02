@@ -117,7 +117,7 @@ const Hero = () => {
       </AnimatePresence>
 
       {!isNav && (
-        <div className="h-[100vh] w-[100vw] bg-black text-white px-2">
+        <div className="h-[100vh] w-[100vw] bg-black text-white px-2  md:mb-16">
           <div className="h-[80px] flex items-center justify-between">
             <div className="m-2 w-[40px]">
               <img src={logo} />

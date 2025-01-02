@@ -8,7 +8,7 @@ function App() {
   const color = "#fff";
 
   return (
-    <div className="no-select relative flex h-full w-full  flex-col items-center justify-center overflow-hidden  bg-background font-[Poppins] ">
+    <div className="no-select relative flex h-full w-full  flex-col items-center justify-center  overflow-hidden  bg-background font-[Poppins]  ">
       <Hero />
       <Tech />
       <Projects />
