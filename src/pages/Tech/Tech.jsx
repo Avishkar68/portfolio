@@ -48,7 +48,7 @@ const Tech = () => {
 
   return (
     <div className=" md:mb-16">
-      <div className="text-white w-[86vw] md:h-[120px] text-[60px] md:text-[80px] pl-10 md:pl-36 font-semibold leading-[60px]">
+      <div className="text-white w-[86vw] md:h-[120px] text-[50px] md:text-[80px] pl-10 md:pl-36 font-semibold leading-[60px]">
         KNOW <br className="md:hidden" /> MY STACK
       </div>
       <div className="h-fit w-[100vw] text-white  flex items-center justify-center gap-10 py-6">
