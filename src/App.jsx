@@ -4,6 +4,7 @@ import Particles from "./components/Particles";
 import "./index.css"
 import Tech from "./pages/Tech/Tech";
 import Projects from "./pages/Projects/Projects";
+import Experience from "./pages/Experience/Experience";
 function App() {
   const color = "#fff";
 
@@ -11,6 +12,7 @@ function App() {
     <div className="no-select relative flex h-full w-full  flex-col items-center justify-center  overflow-hidden  bg-background font-[Poppins]  ">
       <Hero />
       <Tech />
+      <Experience />
       <Projects />
       <Particles
         className="absolute inset-0"

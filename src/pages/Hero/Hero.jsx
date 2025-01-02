@@ -7,6 +7,9 @@ import { AnimatePresence, motion } from "framer-motion";
 import "./Hero.css";
 import logo from "../../assets/logoak.png";
 import logodark from "../../assets/logodark.png";
+import { TextFadeMob } from "../../components/TextFadeMob";
+import { TextFadeReverseMob } from "../../components/TextFadeReverseMob";
+import { TypingAnimation } from "../../components/TypingText";
 const Hero = () => {
   const [isNav, setIsNav] = useState(false);
   const [showAnimations, setShowAnimations] = useState(true); // Track if animations should show
@@ -117,7 +120,7 @@ const Hero = () => {
       </AnimatePresence>
 
       {!isNav && (
-        <div className="h-[100vh] w-[100vw] bg-black text-white px-2  md:mb-16">
+        <div className="hidden md:block h-[100vh] w-[100vw] bg-black text-white px-2  md:mb-16">
           <div className="h-[80px] flex items-center justify-between">
             <div className="m-2 w-[40px]">
               <img src={logo} />
@@ -164,6 +167,55 @@ const Hero = () => {
                 </h1>
               </>
             )}
+          </div>
+        </div>
+      )}
+      {!isNav && (
+        <div className="md:hidden min-h-[100vh] w-[100vw] bg-black text-white px-2  mb-16">
+          <div className="h-[80px] flex items-center justify-between  ">
+            <div className="m-2 w-[40px]">
+              <img src={logo} />
+            </div>
+            <div className="md:hidden flex gap-16 items-center">
+              <TiThMenu
+                className="text-4xl cursor-pointer"
+                onClick={handleMenuClick}
+              />
+            </div>
+          </div>
+          <div className="font-semibold ">
+            {showAnimations && (
+              <>
+                <TextFadeMob
+                  className="text-[18vw] md:leading-[90px] pt-20 text-left"
+                  text="AVISHKAR"
+                />
+                <TextFadeReverseMob
+                  className="text-[18vw] md:leading-[90px]  text-right"
+                  text="KAKADE"
+                />
+              </>
+            )}
+            {!showAnimations && (
+              <>
+                <h1 className="text-[18vw] leading-[90px] pt-24  text-left">
+                  AVISHKAR
+                </h1>
+                <h1 className="text-[18vw] leading-[90px]  text-right">
+                  KAKADE
+                </h1>
+              </>
+            )}
+          </div>
+          <div className="w-[90vw]  md:hidden  mt-10 text-left p-10 mx-auto bg-gray-900 rounded-lg ">
+            <TypingAnimation> Hi, I’m Avishkar..</TypingAnimation>
+            <TypingAnimation>
+              A passionate and detail-oriented developer who thrives on crafting
+              innovative and impactful solutions. With expertise in the MERN
+              stack, I specialize in developing interactive and user-centric web
+              applications that combine sleek designs, smooth animations, and
+              dynamic responsiveness.
+            </TypingAnimation>
           </div>
         </div>
       )}
