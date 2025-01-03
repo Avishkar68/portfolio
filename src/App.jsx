@@ -5,6 +5,7 @@ import "./index.css"
 import Tech from "./pages/Tech/Tech";
 import Projects from "./pages/Projects/Projects";
 import Experience from "./pages/Experience/Experience";
+import Contact from "./pages/Contact/Contact";
 function App() {
   const color = "#fff";
 
@@ -14,6 +15,7 @@ function App() {
       <Tech />
       <Experience />
       <Projects />
+      <Contact />
       <Particles
         className="absolute inset-0"
         quantity={100}

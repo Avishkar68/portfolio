@@ -3,6 +3,7 @@ import { motion } from "framer-motion";
 import { Tilt } from "react-tilt";
 import { fadeIn, textVariant } from "../../utils/motion";
 import { projects } from "../../Data/constant";
+import { styles } from "../Contact/styles";
 const ProjectCard = ({
   index,
   name,
@@ -77,8 +78,8 @@ const Projects = () => {
   };
 
   return (
-    <div className="min-h-fit w-[100vw] text-white ">
-      <div className="text-white w-[86vw] text-[60px] md:text-[80px] pl-10 md:pl-36  py-10 font-semibold leading-[60px]">
+    <div className="min-h-fit w-[100vw] text-white mb-16 md:mb-16">
+      <div className={styles.heroHeadText}>
         MY PROJECTS
       </div>
       {/* parent container */}

@@ -1,12 +1,12 @@
 import React from "react";
 import { experiences } from "../../Data/constant";
-
+import { styles } from "../Contact/styles";
 
 const Experience = () => {
   return (
     <div className="min-h-fit w-[100vw] text-white md:mb-16">
-      <div className="text-white w-[86vw] md:h-[120px] text-[50px] md:text-[80px] pl-10 md:pl-36 font-semibold leading-[60px]">
-        WORK EXPERIENCE
+      <div className={styles.heroHeadText}>
+        EXPERIENCE
       </div>
       <div className="py-10 flex flex-col gap-4">
         {experiences.map((exp, index) => (

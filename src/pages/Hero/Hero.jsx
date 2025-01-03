@@ -102,13 +102,13 @@ const Hero = () => {
                   <li className="cursor-pointer">KNOW MY STACK</li>
                 </motion.div>
                 <motion.div variants={menuListVars}>
-                  <li className="cursor-pointer">PROJECTS</li>
-                </motion.div>
-                <motion.div variants={menuListVars}>
                   <li className="cursor-pointer">EXPERIENCE</li>
                 </motion.div>
                 <motion.div variants={menuListVars}>
-                  <li className="cursor-pointer">CONTACT</li>
+                  <li className="cursor-pointer">MY PROJECTS</li>
+                </motion.div>
+                <motion.div variants={menuListVars}>
+                  <li className="cursor-pointer">GET IN TOUCH</li>
                 </motion.div>
                 <motion.div variants={menuListVars}>
                   <li className="cursor-pointer">ABOUT</li>
