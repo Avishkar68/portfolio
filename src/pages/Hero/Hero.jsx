@@ -10,7 +10,7 @@ import logodark from "../../assets/logodark.png";
 import { TextFadeMob } from "../../components/TextFadeMob";
 import { TextFadeReverseMob } from "../../components/TextFadeReverseMob";
 import { TypingAnimation } from "../../components/TypingText";
-const Hero = () => {
+const Hero = ({ id }) => {
   const [isNav, setIsNav] = useState(false);
   const [showAnimations, setShowAnimations] = useState(true); // Track if animations should show
 
@@ -69,6 +69,14 @@ const Hero = () => {
       },
     },
   };
+  const scrollToSection = (id) => {
+    setIsNav(false);
+    const section = document.getElementById(id);
+    if (section) {
+      section.scrollIntoView({ behavior: "smooth" });
+      setIsNav(false); // Close the menu after navigating
+    }
+  };
 
   return (
     <>
@@ -99,20 +107,34 @@ const Hero = () => {
             >
               <ul className="flex flex-col items-center justify-center text-3xl font-medium gap-4 overflow-hidden">
                 <motion.div variants={menuListVars}>
-                  <li className="cursor-pointer">KNOW MY STACK</li>
+                  <li className="cursor-pointer">
+                    <a href="#tech" onClick={handleMenuClick}>
+                      KNOW MY STACK
+                    </a>
+                  </li>
                 </motion.div>
                 <motion.div variants={menuListVars}>
-                  <li className="cursor-pointer">EXPERIENCE</li>
+                  <li className="cursor-pointer">
+                    <a href="#experience" onClick={handleMenuClick}>
+                      EXPERIENCE
+                    </a>
+                  </li>
                 </motion.div>
                 <motion.div variants={menuListVars}>
-                  <li className="cursor-pointer">MY PROJECTS</li>
+                  <li className="cursor-pointer">
+                    <a href="#projects" onClick={handleMenuClick}>
+                      MY PROJECTS
+                    </a>
+                  </li>
                 </motion.div>
                 <motion.div variants={menuListVars}>
-                  <li className="cursor-pointer">GET IN TOUCH</li>
+                  <li className="cursor-pointer">
+                    <a href="#contact" onClick={handleMenuClick}>
+                      GET IN TOUCH
+                    </a>
+                  </li>
                 </motion.div>
-                <motion.div variants={menuListVars}>
-                  <li className="cursor-pointer">ABOUT</li>
-                </motion.div>
+               
               </ul>
             </motion.div>
           </motion.div>
@@ -120,7 +142,10 @@ const Hero = () => {
       </AnimatePresence>
 
       {!isNav && (
-        <div className="hidden md:block h-[100vh] w-[100vw] bg-black text-white px-2  md:mb-16">
+        <section
+          id={id}
+          className="hidden md:block h-[100vh] w-[100vw] bg-black text-white px-2  md:mb-16"
+        >
           <div className="h-[80px] flex items-center justify-between">
             <div className="m-2 w-[40px]">
               <img src={logo} />
@@ -168,7 +193,7 @@ const Hero = () => {
               </>
             )}
           </div>
-        </div>
+        </section>
       )}
       {!isNav && (
         <div className="md:hidden min-h-[100vh] w-[100vw] bg-black text-white px-2  mb-16">

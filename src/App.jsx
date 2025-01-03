@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import Hero from "./pages/Hero/Hero";
 import Particles from "./components/Particles";
-import "./index.css"
+import "./index.css";
 import Tech from "./pages/Tech/Tech";
 import Projects from "./pages/Projects/Projects";
 import Experience from "./pages/Experience/Experience";
@@ -11,11 +11,19 @@ function App() {
 
   return (
     <div className="no-select relative flex h-full w-full  flex-col items-center justify-center  overflow-hidden  bg-background font-[Poppins]  ">
-      <Hero />
-      <Tech />
-      <Experience />
-      <Projects />
-      <Contact />
+      <Hero id="hero" />
+      <section id="tech">
+        <Tech />
+      </section>
+      <section id="experience">
+        <Experience />
+      </section>
+      <section id="projects">
+        <Projects />
+      </section>
+      <section id="contact">
+        <Contact />
+      </section>
       <Particles
         className="absolute inset-0"
         quantity={100}

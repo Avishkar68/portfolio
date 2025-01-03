@@ -66,7 +66,7 @@ const ProjectCard = ({
   );
 };
 
-const Projects = () => {
+const Projects = ({id}) => {
   const [selectedCategory, setSelectedCategory] = useState("frontend"); // Default category
   const [showDropdown, setShowDropdown] = useState(false);
 
@@ -78,7 +78,7 @@ const Projects = () => {
   };
 
   return (
-    <div className="min-h-fit w-[100vw] text-white mb-16 md:mb-16">
+    <section className="min-h-fit w-[100vw] text-white mb-16 md:mb-16">
       <div className={styles.heroHeadText}>
         MY PROJECTS
       </div>
@@ -143,7 +143,7 @@ const Projects = () => {
           </>
         ) : null}
       </div>
-    </div>
+    </section>
   );
 };
 

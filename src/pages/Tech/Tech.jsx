@@ -10,7 +10,7 @@ import VersionControlDock from "../../components/VCDock";
 import { TypingAnimation } from "../../components/TypingText";
 import { styles } from "../Contact/styles";
 
-const Tech = () => {
+const Tech = ({id}) => {
   const slugs = [
     "typescript",
     "javascript",
@@ -49,7 +49,7 @@ const Tech = () => {
   const [isHoveredVC, setIsHoveredVC] = useState(false);
 
   return (
-    <div className=" md:mb-16">
+    <section    className=" md:mb-16">
       <div className={styles.heroHeadText}>
         KNOW <br className="md:hidden" /> MY STACK
       </div>
@@ -113,7 +113,7 @@ const Tech = () => {
         </div>
         
       </div>
-    </div>
+    </section>
   );
 };
 

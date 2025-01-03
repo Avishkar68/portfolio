@@ -2,9 +2,9 @@ import React from "react";
 import { experiences } from "../../Data/constant";
 import { styles } from "../Contact/styles";
 
-const Experience = () => {
+const Experience = ({id}) => {
   return (
-    <div className="min-h-fit w-[100vw] text-white md:mb-16">
+    <section   className="min-h-fit w-[100vw] text-white md:mb-16">
       <div className={styles.heroHeadText}>
         EXPERIENCE
       </div>
@@ -37,7 +37,7 @@ const Experience = () => {
           </div>
         ))}
       </div>
-    </div>
+    </section>
   );
 };
 

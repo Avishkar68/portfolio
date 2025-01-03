@@ -5,7 +5,7 @@ import { motion } from "framer-motion";
 import { slideIn } from "../../utils/motion";
 import emailjs from '@emailjs/browser'
 import { styles } from "./styles";
-const Contact = () => {
+const Contact = ({id}) => {
     const formRef = useRef()
   const [form , setForm] = useState({
     name: '',
@@ -55,7 +55,7 @@ const Contact = () => {
     })
   }
   return (
-    <div className="min-h-fit w-[94vw] text-white flex items-center justify-around mb-24 md:mb-16">
+    <section  className="min-h-fit w-[94vw] text-white flex items-center justify-around mb-24 md:mb-10">
       <motion.div
         variants={slideIn("left", "tween", 0.2, 1)}
         className="w-[100vw] md:flex-[0.6] bg-black-100 p-8 rounded-2xl"
@@ -116,7 +116,7 @@ const Contact = () => {
         <Globe className="top-28" />
         <div className="pointer-events-none absolute inset-0 h-full bg-[radial-gradient(circle_at_50%_200%,rgba(0,0,0,0.2),rgba(255,255,255,0))]" />
       </div>
-    </div>
+    </section>
   );
 };
 
