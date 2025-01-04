@@ -10,6 +10,9 @@ import VersionControlDock from "../../components/VCDock";
 import { TypingAnimation } from "../../components/TypingText";
 import { styles } from "../Contact/styles";
 import MobileDock from "../../components/MobileDock";
+import MobileBackendDock from "../../components/MobileBackendDock";
+import MobileDatabaseDock from "../../components/MobileDatabaseDock";
+import MobileVCDock from "../../components/MobileVCDock";
 
 const Tech = ({id}) => {
   const slugs = [
@@ -83,7 +86,7 @@ const Tech = ({id}) => {
           </motion.div>
           <div className=" border border-white rounded-md m-10 text-white md:hidden "><MobileDock/></div>
           <motion.div
-            className="p-6 border border-white rounded-md m-10 text-white flex items-center justify-center"
+            className="hidden p-6 border border-white rounded-md m-10 text-white md:flex items-center justify-center"
             onMouseEnter={() => setIsHoveredBackend(true)}
             onMouseLeave={() => setIsHoveredBackend(false)}
             initial={{ scale: 1 }}
@@ -92,8 +95,9 @@ const Tech = ({id}) => {
           >
             {isHoveredBackend ? <BackendDock /> : "BACKEND"}
           </motion.div>
+          <div className=" border border-white rounded-md m-10 text-white md:hidden "><MobileBackendDock/></div>
           <motion.div
-            className="p-6 border border-white rounded-md m-10 text-white flex items-center justify-center"
+            className="hidden p-6 border border-white rounded-md m-10 text-white md:flex items-center justify-center"
             onMouseEnter={() => setIsHoveredDB(true)}
             onMouseLeave={() => setIsHoveredDB(false)}
             initial={{ scale: 1 }}
@@ -102,8 +106,10 @@ const Tech = ({id}) => {
           >
             {isHoveredDB ? <DatabaseTechDock /> : "DATABASE"}
           </motion.div>
+          <div className=" border border-white rounded-md m-10 text-white md:hidden "><MobileDatabaseDock/></div>
+
           <motion.div
-            className="p-6 border border-white rounded-md m-10 text-white flex items-center justify-center"
+            className="hidden p-6 border border-white rounded-md m-10 text-white md:flex items-center justify-center"
             onMouseEnter={() => setIsHoveredVC(true)}
             onMouseLeave={() => setIsHoveredVC(false)}
             initial={{ scale: 1 }}
@@ -112,6 +118,8 @@ const Tech = ({id}) => {
           >
             {isHoveredVC ? <VersionControlDock /> : "VERSION CONTROL"}
           </motion.div>
+          <div className=" border border-white rounded-md m-10 text-white md:hidden "><MobileVCDock/></div>
+
         </div>
         
       </div>
