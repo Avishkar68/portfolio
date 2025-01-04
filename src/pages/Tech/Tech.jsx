@@ -9,6 +9,7 @@ import DatabaseTechDock from "../../components/DatabaseDock";
 import VersionControlDock from "../../components/VCDock";
 import { TypingAnimation } from "../../components/TypingText";
 import { styles } from "../Contact/styles";
+import MobileDock from "../../components/MobileDock";
 
 const Tech = ({id}) => {
   const slugs = [
@@ -71,7 +72,7 @@ const Tech = ({id}) => {
 
         <div className=" w-[100vw] md:w-[40vw]  text-4xl font-semibold">
           <motion.div
-            className="p-6 border border-white rounded-md m-10 text-white flex items-center justify-center"
+            className="hidden p-6 border border-white rounded-md m-10 text-white md:flex items-center justify-center"
             onMouseEnter={() => setIsHovered(true)}
             onMouseLeave={() => setIsHovered(false)}
             initial={{ scale: 1 }}
@@ -80,6 +81,7 @@ const Tech = ({id}) => {
           >
             {isHovered ? <Dock /> : "FRONTEND"}
           </motion.div>
+          <div className=" border border-white rounded-md m-10 text-white md:hidden "><MobileDock/></div>
           <motion.div
             className="p-6 border border-white rounded-md m-10 text-white flex items-center justify-center"
             onMouseEnter={() => setIsHoveredBackend(true)}

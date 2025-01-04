@@ -26,7 +26,7 @@ function App() {
       </section>
       <Particles
         className="absolute inset-0"
-        quantity={100}
+        quantity={500}
         ease={80}
         color={color}
         refresh={true}

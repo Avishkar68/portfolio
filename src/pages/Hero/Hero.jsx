@@ -169,7 +169,7 @@ const Hero = ({ id }) => {
               />
             </div>
           </div>
-          <div className="font-semibold">
+          <div className="font-semibold px-10">
             {showAnimations && (
               <>
                 <TextFade
